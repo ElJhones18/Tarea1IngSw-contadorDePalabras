@@ -69,10 +69,10 @@ public class AppControl {
         int total = 0;
 
         for (File f: textFiles) {
-            FileReader fr = new FileReader(f);
-            WordCounter wc = new WordCounter(fr.readText(), word);
-            System.out.println(f.getName() + ": " + wc.wordCount() + " veces");
-            total += wc.wordCount();
+            fileReader = new FileReader(f);
+            wordCounter = new WordCounter(fileReader.readText(), word);
+            System.out.println(f.getName() + ": " + wordCounter.wordCount() + " veces");
+            total += wordCounter.wordCount();
         }
 
         System.out.println("Total: " + total + " veces");
